@@ -60,8 +60,8 @@ width: 100%;
     line-height: 35px;
     word-wrap: break-word;
     font-weight: 600;
-    margin-bottom: 0;
     margin: 0;
+    margin-bottom: .5rem;
 }
 
 /*post creation details*/

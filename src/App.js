@@ -2,7 +2,7 @@
 import Navbar from "./components/Navbar/Navbar";
 
 //import browser router, route, and routes to set up  website's router with specific routes
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 
 //import SignUp for route declaration
 import SignUp from "./pages/SignUp/SignUp";
@@ -48,6 +48,8 @@ function App() {
                 </div>
               }
             />
+
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Router>
       </div>

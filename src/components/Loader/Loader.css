@@ -1,0 +1,19 @@
+/*loader stylings attached to each page for page load fade*/
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: loadFade 1.5s;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    scale: 0;
+    z-index: 100;
+}
+
+@keyframes loadFade {
+    0% {opacity: 1; scale: 1;}
+    40% {opacity: 1; scale: 1;}
+    80% {opacity: 0; scale: 1;}
+    100% {opacity: 0; scale: 0;}
+}

@@ -1,0 +1,104 @@
+/* entire comments container and container when signed out*/
+.post-comments-container {
+    border-top: 1px solid;
+    padding: .5rem 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    background-color: transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; 
+}
+
+.guest-post-comments-container {
+    border-top: 1px solid;
+    padding: 2rem 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    background-color: transparent;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*top of container contents*/
+.comment-top {
+    padding: 1rem 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    border-width: 0 0 1px 0;
+}
+
+.delete-comment-button {
+    background-color: transparent;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.delete-comment-button:hover {
+    filter: saturate(60%);
+}
+
+/*comment input*/
+.comment-input {
+    height: 20px;
+    padding: .5rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.comment-input:focus {
+    outline: none;
+}
+
+/*individual comment stylings*/
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 6px 4rem;
+    color: black;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 2rem; 
+}
+
+/*comment body text*/
+.comment-text {
+    padding: 1.5rem 0;
+}
+
+/*responsiveness*/
+@media screen and (max-width: 450px) {
+    .comment-container {
+        width: 80%;
+        padding: 2px 1rem;
+    }
+
+    .comment-text {
+        padding: .5rem 0;
+    }
+
+    .comment-top {
+        font-size: 12px;
+        padding: .51rem 0
+    }
+    
+    .comment-input {
+        margin-bottom: 1.5rem;
+    }
+}

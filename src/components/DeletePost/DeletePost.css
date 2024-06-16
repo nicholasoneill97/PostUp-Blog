@@ -1,0 +1,54 @@
+/*delete post button stylings*/
+.delete-post-button {
+    color: var(--primary);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: Poppins;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;   
+}
+
+.delete-post-button:hover {
+    filter: saturate(70%);
+}
+
+/*responsiveness*/
+@media screen and (max-width: 1030px) {
+    .delete-post-button {
+        color: var(--primary);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: Poppins;
+        padding: 0;
+        font-size: 1.3vw;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .delete-post-button {
+        color: var(--primary);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: Poppins;
+        font-size: 1.6vw;    
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .delete-post-button {
+        color: var(--primary);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: Poppins;
+        font-size: 2vw;
+        margin-right: .2rem;   
+    }
+}
+
+
+

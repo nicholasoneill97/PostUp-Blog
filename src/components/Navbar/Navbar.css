@@ -1,0 +1,177 @@
+/*container holding nav bar*/
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary);
+    backdrop-filter: blur(10px);
+    z-index: 11;
+    box-shadow: 0 0 15px 5px var(--secondary);
+}
+
+/*nav bar*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .7rem;
+    animation: postFadeIn 3s; 
+}
+
+/*nav links stylings*/
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.nav-links button {
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: Poppins;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--primary);
+    transition: .5s;
+}
+
+.nav-link:hover {
+    color: white;
+    transition: .5s;
+}
+
+/*nav title and subtitle*/
+.nav-title {
+    color: var(--primary);
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.nav-subtitle {
+    font-size: 15px;
+    color: white;
+    padding: 0 1rem
+}
+.page-title-container {
+    display: flex;
+    align-items: baseline;
+}
+
+/*signed in display of user*/
+.signed-in-display {
+    color: white
+}
+
+/*responsiveness*/
+@media screen and (max-width: 800px) {
+    .signed-in-display {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nav-links,
+    .nav-links button {
+        font-size: 15px;
+        gap: 20px
+    }
+
+    .nav-title {
+        font-size: 20px;
+    }
+
+    .nav-subtitle {
+        font-size: 8px;
+        color: white;
+        padding: 0 1rem;
+    }
+
+    .signed-in-display {
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 527px) {
+    .nav-links,
+    .nav-links button {
+        font-size: 11px;
+        gap: 10px
+    }
+
+    .nav-bar-link {
+        border-radius: 10px;
+        border: .5px solid black;
+        padding: .3rem;
+        background-color: rgb(76, 72, 72);
+    }
+
+    .nav-links button {
+        border-radius: 10px;
+        border: .5px solid black;
+        padding: .3rem;
+        background-color: rgb(76, 72, 72);
+    }
+
+    .nav-title {
+        font-size: 16px;
+    }
+
+    .nav-subtitle {
+        font-size: 6px;
+        color: white;
+        padding: 0 .4rem;
+    }
+
+    .signed-in-display {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-links,
+    .nav-links button {
+        font-size: 10px;
+        gap: 4px
+    }
+
+    .nav-title {
+        font-size: 10px;
+    }
+
+    .nav-subtitle {
+        font-size: 6px;
+        color: white;
+        padding: 0 .3rem;
+    }
+
+    .signed-in-display {
+        font-size: 8px;
+        letter-spacing: .3px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .nav-links,
+    .nav-links button {
+        font-size: 8px;
+        gap: 0px
+    }
+}    
+
+@media screen and (min-width: 500px) and (max-height: 600px) {
+    .nav-title {
+        font-size: 2vw;
+    }
+    
+    .nav-subtitle {
+        font-size: 1.6vw;
+    }
+}

@@ -1,0 +1,485 @@
+
+
+/*posts container*/
+.posts-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
+
+/*top of each post*/
+.post-top {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid;
+    max-width: 100%;
+}
+
+.post-creator {
+    color: white;
+    font-size: 2vw;
+    font-weight: 100;
+}
+
+.name {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/*individual posts' container*/
+.user-post-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    width: 70%;   
+    border-radius: 20px;
+    min-width: 300px;
+    margin: auto;
+    padding: 0;
+    background: linear-gradient(to right, black, 50%, rgb(44, 41, 41)) ;
+    box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.644);
+    animation: postFadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*post image*/
+.user-post-container img {
+    border: 1px solid transparent;
+    width: 420px;
+    height: 370px;
+    padding: 1rem;
+    z-index: 95;
+}
+
+.user-post-container img:hover {
+    cursor: pointer;
+}
+
+/*post-content*/
+.right-side-post {
+    display: flex;
+    flex-direction: column;
+    max-width: 55%;
+    width: 45%;
+    padding: 1.4rem 1rem;
+}
+
+.title {
+    font-size: 2vw;
+    margin: 0;
+    margin-top: .5rem;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+.timestamp {
+    margin: 0;
+    font-weight: 100;
+    color: whitesmoke;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.body {
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: rgb(85, 83, 83);
+    height: 120px;
+    width: 95%;
+    min-width: 90%;
+    max-width: 95%;
+    font-weight: 300;
+    line-height: 31px;
+    font-size: 1.8vw;
+    text-align: left;
+    word-wrap: break-word;
+    margin: 0;
+    margin-bottom: .5rem;
+}
+
+/*post analytics: likes and comments*/
+.analytics {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;  
+}
+
+.likes {
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
+.likes-container {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.comments {
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
+.comments-container {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.comments-icon {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.like-icon {
+    font-size: 20px;
+}
+
+/*bottom section of each post with post link*/
+.bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.post-link-button {
+    color: var(--primary);
+    font-family: Poppins;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 11;
+    transition: .5s;
+}
+
+.post-link-button:hover {
+    color: white;
+    transition: .5s;
+}
+
+/*stylings for text when no posts are found*/
+.no-posts {
+    margin: auto;
+}
+
+/*responsiveness*/
+@media screen and (max-width: 1200px) {
+    .title {
+        font-size: 2.3vw;
+        max-width: 95%;
+    }
+    
+    .user-post-container {
+        margin: auto;
+        width: 90%;
+    }
+
+    .posts-container {
+        margin-top: 9rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .user-post-container img {
+        border: 1px solid transparent;
+        width: 380px;
+        height: 330px;
+        padding: 1rem;
+    }
+
+    .title {
+        line-height: 30px;
+    }
+
+    .user-post-container {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .user-post-container img {
+        border: 1px solid transparent;
+        width: 380px;
+        height: 330px;
+        padding: 0rem;
+    }
+
+    .title {
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        line-height: 30px;
+    }
+
+    .user-post-container img {
+        border: 1px solid transparent;
+        width: 300px;
+        height: 250px;
+        padding: 0rem;
+    }
+
+    .post-top {
+        margin-bottom: .4rem;
+    }
+
+    .timestamp {
+        margin-top: 0;
+        margin-bottom: .3rem;
+    }
+
+    .analytics {
+        font-size: 2vw;
+    }
+
+    .posts-container {
+        margin-top: 7rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .user-post-container img {
+        border: 1px solid transparent;
+        width: 270px;
+        height: 220px;
+        padding: 0rem;
+    }
+
+    .body {
+        width: 80%;
+        line-height: 20px;
+        height: 70px;
+    }
+
+    .title {
+        width: 80%;
+        line-height: 20px;
+    }
+
+    .analytics {
+        font-size: 1.8vw;
+    }
+
+    .post-link-button {
+        font-size: 2vw;
+    }
+
+    .comments-icon {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .comments-container {
+        gap: 2px
+    }
+
+    .likes-container {
+        gap: 2px
+    }
+
+    .like-icon {
+        font-size: 15px;
+    }
+
+    .posts-container {
+        margin-top: 6rem;
+    }
+}
+
+
+@media screen and (max-width: 515px) {
+    .user-post-container img {
+        border: none;
+        border-radius: 10px;
+        width: 500px;
+        max-width: 100%;
+        height: 290px;
+        padding: 0;
+        margin: auto;    
+    }
+
+    .posts-container {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 100%;
+        padding-top: 1rem;
+        margin-top: 4rem;
+    }
+
+    .user-post-container {
+        gap: 0px;
+        max-height: none;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 0;
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+        max-height: none;
+        padding: .4rem 0;
+        background: linear-gradient(to bottom, rgb(24, 23, 23), 10%,rgb(45, 44, 44)   ,  65%, black) 
+    }
+
+    .body {
+        max-width: 95%;
+        width: 95%;
+        height: 40px;
+        font-size: 10px;
+        line-height: 18px;
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 4vw;
+        line-height: 25px;
+        max-width: 95%;
+        margin-bottom: .4rem;
+        margin-top: 1.5rem;
+        width: 100%;    
+    }
+
+    .likes-container {
+        gap: 6px
+    }
+
+    .likes {
+        font-size: 12px;
+    }
+
+    .comments {
+        font-size: 12px;
+    }
+
+    .comments-container {
+        gap: 6px
+    }
+
+    .post-link-button {
+        font-size: 12px;
+        margin-bottom: .3rem;
+        padding: 0;
+    }
+    
+    .analytics {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: .5rem;
+    }
+
+    .timestamp {
+        font-size: 10px;
+        margin-bottom: .7rem;
+    }
+
+    .right-side-post {
+        margin: auto;
+        margin-bottom: 0;
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .post-top {
+        margin-bottom: 0;
+        width: 100%;
+        max-width: 100%;    
+    }
+
+    .post-creator {
+        font-size: 4vw;
+    }
+
+    .post-link-button {
+        font-size: 3vw;
+        margin: 0;
+    }   
+}
+
+@media screen and (max-width: 400px) {
+    .user-post-container {
+        width: 99%;
+        max-width: fit-content;
+        justify-content: space-between;
+        padding-bottom: 0;
+        padding-top: .5rem;
+    }
+
+    .user-post-container img {
+        width: 380px;
+        height: 350px;
+        max-width: 100%;
+        margin-top: .2rem;
+    }
+
+    .post-top {
+        padding: 0.4rem 0;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .posts-container {
+        gap: 40px;
+        margin-top: 6rem;
+    }
+
+    .title {
+        font-size: 4.1vw;
+        line-height: 20px;
+        max-width: 95%;
+    }
+
+    .timestamp {
+        margin-bottom: 1rem;
+    }
+
+    .body {
+        height: 35px;
+    }
+}
+
+@media screen and (min-height: 700px) and (min-width: 600px) {
+    .posts-container {
+        margin-top: 7rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .posts-container {
+        margin-top: 9rem;
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-height: 730px) and (min-height: 715px) {
+    .user-post-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .user-post-container img {
+        margin-left: 3rem;
+    }
+}
+
+

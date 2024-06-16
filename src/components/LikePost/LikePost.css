@@ -1,0 +1,8 @@
+/*like icon stylings*/
+.liked {
+    color: rgb(216, 86, 108);
+}
+
+.not-liked:hover {
+    color: pink
+}

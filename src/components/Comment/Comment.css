@@ -85,8 +85,9 @@
 /*responsiveness*/
 @media screen and (max-width: 450px) {
     .comment-container {
-        width: 80%;
-        padding: 2px 1rem;
+        width: 90%;
+        padding: 0 1rem;
+        margin: auto;
     }
 
     .comment-text {

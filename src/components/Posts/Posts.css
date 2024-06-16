@@ -78,10 +78,10 @@
 }
 
 .title {
-    font-size: 2vw;
+    font-size: 2.8vw;
     margin: 0;
     margin-top: .5rem;
-    line-height: 30px;
+    line-height: 35px;
     word-wrap: break-word;
 }
 
@@ -184,7 +184,6 @@
 /*responsiveness*/
 @media screen and (max-width: 1200px) {
     .title {
-        font-size: 2.3vw;
         max-width: 95%;
     }
     
@@ -226,8 +225,31 @@
 
     .title {
         margin: 0;
+        font-size: 25px;
     }
-    
+
+    .timestamp {
+        font-size: 12px;
+        font-weight: 200;
+        margin: 0;
+        margin-bottom: .5rem;
+    }
+    .body {
+        line-height: 20px;
+        height: 70px;
+    }
+    .likes-container {
+        gap: 2px
+    }
+    .like-icon {
+        font-size: 15px;
+    }
+    .comments-container {
+        gap: 2px
+    }
+    .comments-icon {
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -276,7 +298,7 @@
 
     .title {
         width: 80%;
-        line-height: 20px;
+        line-height: 25px;
     }
 
     .analytics {
@@ -347,14 +369,15 @@
     .body {
         max-width: 95%;
         width: 95%;
-        height: 40px;
-        font-size: 10px;
-        line-height: 18px;
+        height: 65px;
+        font-size: 15px;
+        line-height: 22px;
         overflow: hidden;
     }
 
     .title {
-        font-size: 4vw;
+        font-size: 5vw;
+
         line-height: 25px;
         max-width: 95%;
         margin-bottom: .4rem;
@@ -367,11 +390,11 @@
     }
 
     .likes {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .comments {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .comments-container {
@@ -379,7 +402,7 @@
     }
 
     .post-link-button {
-        font-size: 12px;
+        font-size: 15px;
         margin-bottom: .3rem;
         padding: 0;
     }
@@ -393,8 +416,10 @@
     }
 
     .timestamp {
-        font-size: 10px;
+        font-size: 13px;
         margin-bottom: .7rem;
+        font-weight: 300;
+        color: var(--primary);
     }
 
     .right-side-post {
@@ -412,6 +437,7 @@
 
     .post-creator {
         font-size: 4vw;
+        font-weight: 200;
     }
 
     .post-link-button {
@@ -448,7 +474,6 @@
     }
 
     .title {
-        font-size: 4.1vw;
         line-height: 20px;
         max-width: 95%;
     }
@@ -458,7 +483,7 @@
     }
 
     .body {
-        height: 35px;
+        height: 65px;
     }
 }
 

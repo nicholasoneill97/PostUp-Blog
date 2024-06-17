@@ -64,6 +64,7 @@
     background-color: transparent;
     border: none;
     font-size: 1.5vw;
+    color: black;
 }
 
 /*title of form*/
@@ -87,6 +88,8 @@
     margin-bottom: 2rem;
     transition: 1s;
     font-size: 20px;
+    color: black;
+    letter-spacing: 1px;
 }
 
 .sign-up-button:hover {

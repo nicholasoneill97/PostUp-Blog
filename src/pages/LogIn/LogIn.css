@@ -53,6 +53,7 @@
     background-color: transparent;
     border: none;
     font-size: 1.5vw;
+    color: black;
 }
 
 .log-in-container input {
@@ -77,6 +78,7 @@ section {
     margin-bottom: 2rem;
     transition: 1s;
     font-size: 20px;
+    color: black;
     letter-spacing: 1px;
 }
 
@@ -153,10 +155,12 @@ section {
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 370px) {
     .log-in-container input {
         width: 150px;
+        font-size: 4vw;
     }
+
     .log-in-container {
         width: 70%;
     }

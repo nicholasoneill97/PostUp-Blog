@@ -213,6 +213,8 @@
         width: 100%;
         border-radius: 0;
     }
+
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -489,7 +491,7 @@
 
 @media screen and (min-height: 700px) and (min-width: 600px) {
     .posts-container {
-        margin-top: 7rem;
+        margin-top: 9rem;
     }
 }
 

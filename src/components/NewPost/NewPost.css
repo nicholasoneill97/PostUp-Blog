@@ -26,7 +26,7 @@
     transition: 1s;
     position: fixed;
     margin-top: 4rem;
-    top: 10%;
+    top: 14%;
     right: 50%;
     transform: translateX(50%);    
     width: 340px;
@@ -42,12 +42,14 @@
     box-shadow: 0 0 15px 5px var(--secondary);
     letter-spacing: .5px;
     animation: postFadeIn 3s;
+    z-index: 199;
 }
 
 .Log-in-link:hover {
     color: rgb(214, 170, 170);
-    transition: 1s;
+    transition: .5s;
     background-color: rgb(26, 25, 25);
+    z-index: 204;
 }
 
 /*new post button that, when clicked, opens up new post container*/
@@ -69,7 +71,7 @@
     width: 140px;
     text-align: center;
     box-shadow: 0 0 15px 5px var(--secondary);
-    z-index: 100;
+    z-index: 200;
 }
 
 @keyframes buttonFadeIn {
@@ -95,7 +97,7 @@
     font-size: 20px;
     border-radius: 20px;
     color: white;
-    z-index: 101; 
+    z-index: 201; 
 }
 
 .new-post-toggler-close:hover {
@@ -271,7 +273,7 @@ textarea {
     }
 
     .Log-in-link {
-        top: 8%;
+        top: 10%;
         border-radius: 20px;
         font-size: 3vw;
     }
@@ -398,4 +400,13 @@ textarea {
     .new-post-toggler-close {
         top: 15%
     }   
+}
+
+@media screen and (max-height: 400px) and (max-width: 1000px) {
+    .Log-in-link {
+        top: 25%
+    }
+    .new-post-toggler-open {
+        top: 28%
+    }
 }

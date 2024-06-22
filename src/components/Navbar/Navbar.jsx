@@ -1,5 +1,5 @@
 //import React
-import React from "react";
+import React, { useState } from "react";
 
 //import Link for navigation
 import { Link } from "react-router-dom";
@@ -13,19 +13,30 @@ import { signOut } from "firebase/auth";
 
 //import nav bar stylings
 import '../Navbar/Navbar.css'
+import { GiHamburgerMenu } from "react-icons/gi";
+import { HiOutlineXMark } from "react-icons/hi2";
 
 
 export default function Navbar() {
 
+
+  const signOutUserFromMobile = () => {
+      signOut(auth)
+      setNavBarOpen(false)
+  }
+
   {/*sets authorized user to user variable*/}
   const [user] = useAuthState(auth);
 
+  const [navBarOpen, setNavBarOpen] = useState(false)
+
   return (
+  <>
     <div className="nav-container">
       <nav className="navbar">
         <div className="page-title-container">
           <h1 className="nav-title">
-            <Link to='/' className="nav-link">
+            <Link to='/' className="nav-title-link">
               Post Up
             </Link>
           </h1>
@@ -37,18 +48,9 @@ export default function Navbar() {
           <Link className="nav-link nav-bar-link" to="/">
             Home{" "}
           </Link>
-          {/*displayed if the user is not a signed in user currently*/}
-          {!user && (
-              <>
-                <Link className="nav-link nav-bar-link" to="/login">
-                    Log In{" "}
-                </Link>
-                <Link className="nav-link nav-bar-link" to="/signup">
-                    Sign Up{" "}
-                </Link>
-              </>
-            )}
-        
+          <div>
+            {navBarOpen ? <HiOutlineXMark onClick={() => {setNavBarOpen(!navBarOpen)}} className="mobile-menu-button" /> : <GiHamburgerMenu onClick={() => {setNavBarOpen(!navBarOpen)}} className="mobile-menu-button" />}
+          </div>
           {/*displays if the user is a signed in user currently*/}
           {user && (
               <>
@@ -62,8 +64,51 @@ export default function Navbar() {
                 </button>
               </>
             )}
+          {!user && (
+              <>
+                <Link className="nav-link nav-bar-link" to="/login">
+                  Log In{" "}
+                </Link>
+                <Link className="nav-link nav-bar-link" to="/signup">
+                  Sign Up{" "}
+                </Link>
+              </>
+            )}
         </div>
       </nav>
     </div>
+    {!user && navBarOpen ? (
+          <>
+            <div className="mobile-backdrop"></div>
+            <div className="mobile-menu">
+              <Link className="mobile-nav-link nav-bar-link" to="/" onClick={() => {setNavBarOpen(!navBarOpen)}}>
+                Home{" "}
+              </Link>
+              {/*displayed if the user is not a signed in user currently*/}
+              <Link className="mobile-nav-link nav-bar-link" to="/login" onClick={() => {setNavBarOpen(!navBarOpen)}}>
+                Log In{" "}
+              </Link>
+              <Link className="mobile-nav-link nav-bar-link" to="/signup" onClick={() => {setNavBarOpen(!navBarOpen)}}>
+                Sign Up{" "}
+              </Link>
+            </div>
+          </>) : ( null )
+          }
+    {user && navBarOpen ? (
+          <>
+            <div className="mobile-backdrop"></div>
+            <div className="mobile-menu">
+              <Link className="mobile-nav-link nav-bar-link" to="/" onClick={() => {setNavBarOpen(!navBarOpen)}}>
+                Home{" "}
+              </Link>
+              <button className="mobile-nav-link nav-bar-link"
+                      onClick={signOutUserFromMobile}
+              >
+                Sign Out
+              </button>
+            </div>
+          </>) : ( null )
+          }
+  </>
   );
 }

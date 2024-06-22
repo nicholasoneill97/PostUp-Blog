@@ -107,7 +107,7 @@ export default function Navbar() {
               <Link className="mobile-nav-link nav-bar-link" to="/" onClick={() => {setNavBarOpen(!navBarOpen)}}>
                 Home{" "}
               </Link>
-              <button className="mobile-nav-link nav-bar-link"
+              <button className="mobile-nav-link nav-bar-link sign-out-button"
                       onClick={signOutUserFromMobile}
               >
                 Sign Out

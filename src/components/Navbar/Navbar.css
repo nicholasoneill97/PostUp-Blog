@@ -61,6 +61,8 @@
     transition: .5s;
 }
 
+/*mobile-menu*/
+
 .mobile-menu-button {
     display: none;
     float: right;
@@ -95,6 +97,11 @@
     position: fixed;
     z-index: 200;
     top: 0
+}
+
+.sign-out-button {
+    background-color: transparent;
+    border: none
 }
 
 /*nav title and subtitle*/

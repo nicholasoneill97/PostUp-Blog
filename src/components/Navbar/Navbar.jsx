@@ -36,7 +36,10 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="page-title-container">
           <h1 className="nav-title">
-            <Link to='/' className="nav-title-link">
+            <Link to='/' 
+                  className="nav-title-link"
+                  onClick={() => {setNavBarOpen(false)}}
+              >
               Post Up
             </Link>
           </h1>
@@ -45,15 +48,15 @@ export default function Navbar() {
           </span>
         </div>
         <div className="nav-links">
-          <Link className="nav-link nav-bar-link" to="/">
-            Home{" "}
-          </Link>
           <div>
             {navBarOpen ? <HiOutlineXMark onClick={() => {setNavBarOpen(!navBarOpen)}} className="mobile-menu-button" /> : <GiHamburgerMenu onClick={() => {setNavBarOpen(!navBarOpen)}} className="mobile-menu-button" />}
           </div>
           {/*displays if the user is a signed in user currently*/}
           {user && (
               <>
+                <Link className="nav-link nav-bar-link" to="/">
+                  Home{" "}
+                </Link>
                 <label className="signed-in-display">
                   Signed is as {user.displayName || user.email}
                 </label>
@@ -66,6 +69,9 @@ export default function Navbar() {
             )}
           {!user && (
               <>
+                <Link className="nav-link nav-bar-link" to="/">
+                  Home{" "}
+                </Link>
                 <Link className="nav-link nav-bar-link" to="/login">
                   Log In{" "}
                 </Link>

@@ -96,7 +96,9 @@
     width: 100%;
     animation: mobileSlide 1s;
     display: none;
-    z-index: 201;
+    position: absolute;
+    z-index: 200;
+    top: 0
 }
 
 /*nav title and subtitle*/

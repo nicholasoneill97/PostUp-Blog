@@ -375,7 +375,7 @@ textarea {
 
 @media screen and (max-height: 600px) and (max-width: 1000px) {
     .new-post-container {
-        top: 0;
+        top: 10%;
         height: 350px;
     }
 
@@ -389,16 +389,16 @@ textarea {
     }
 
     .new-post-toggler-open {
-        top: 20%
+        top: 30%
     }
 
     .Log-in-link {
         font-size: 2.5vw;
-        top: 17%
+        top: 30%
     }
 
     .new-post-toggler-close {
-        top: 15%
+        top: 22%
     }   
 }
 

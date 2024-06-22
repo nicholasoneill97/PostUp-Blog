@@ -9,6 +9,7 @@
     z-index: 203;
     box-shadow: 0 0 15px 5px var(--secondary);
     height: auto;
+    max-height: 25%;
 }
 
 /*nav bar*/
@@ -43,11 +44,6 @@
     display: none;
 }
 
-.mobile-nav-link:hover {
-    background-color: white;
-    transition: .5s;
-}
-
 .nav-title-link {
     text-decoration: none;
     color: var(--primary);
@@ -80,7 +76,7 @@
     z-index: 201;
     background-color: rgba(0, 0, 0, 0.952);
     text-align: center;
-    position: absolute;
+    position: fixed;
     top: 8%;
     animation: mobileSlide 1s;
 }
@@ -96,7 +92,7 @@
     width: 100%;
     animation: mobileSlide 1s;
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 200;
     top: 0
 }
